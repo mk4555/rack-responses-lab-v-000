@@ -3,7 +3,7 @@ class Application
     resp = Rack::Response.new
     time = Time.now
     resp.write "Current time is: #{time.inspect}\n"
-    if time.hour < 12
+    if time.hour <= 12
       resp.write "Good Morning!"
     else
       resp.write "Good Afternoon!"
