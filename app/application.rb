@@ -1,7 +1,7 @@
 class Application
   def call(env)
     resp = Rack::Response.new
-    time = Time.new
+    time = Time.now
     resp.write "Current time is: #{time.inspect}\n"
     if time.hour < 12
       resp.write "Good Morning!"
